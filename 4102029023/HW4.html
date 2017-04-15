@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <style>
+         html {
+         height: 200%;
+         font-family:微軟正黑體;
+         }
+         body {
+         background-image: url(haha1.jpg);
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         background-position: center;
+         background-size: cover;
+         }
+         #mwt_mwt_slider_scroll
+         {
+         top: 0;
+         left:-360px;
+         width:360px;	
+         position:fixed;
+         z-index:9999;
+         }
+         #mwt_slider_content{
+         background:#fff;
+         text-align:center;
+         padding-top:20px;
+         }
+         #mwt_tab {
+         position:absolute;
+         top:20px;
+         right:-24px;
+         width:24px;
+         background:#fff;
+         color:#53625d;
+         font-family:Arial, Helvetica, sans-serif;	
+         text-align:center;
+         padding:16px 0;
+         font-weight:bold;
+         -moz-border-radius-topright:10px;
+         -moz-border-radius-bottomright:10px;
+         -webkit-border-top-right-radius:10px;
+         -webkit-border-bottom-right-radius:10px;	
+         }
+         #mwt_tab span {
+         display:block;
+         height:12px;
+         padding:1px 0;
+         line-height:12px;
+         text-transform:uppercase;
+         font-size:12px;
+         }
+         .aa{
+         font-size:20px;
+         font-weight:bold;
+         }
+         .div1{
+         border-width:3px;
+         border-style:solid;
+         border-color:rgba(0,0,0,0.0);
+         background-color:rgba(0,0,0,0.2);
+         border-radius:20px;
+         padding:5px;
+         width:500px;
+         height:2000px;
+         margin-left:450px;
+         margin-top:20px;
+         }
+         p{ sans-serif; color:#000; font-size:16px; margin-left:30px; text-align:left}
+         #btn{  
+         outline:none;
+         height: 40px;
+         text-align: center;
+         width: 130px;
+         border-radius:40px;
+         background: #fff;
+         border: 2px solid $green;
+         color:$green;
+         letter-spacing:1px;
+         text-shadow:0;
+         font:{
+         size:12px;
+         weight:bold;
+         }
+         }
+         a{text-decoration:none; color:#000; font-size:25px;}
+         a:hover{text-decoration:underline;}
+         #A1 { display:none;}
+         #I { display:none;}
+         #J { display:none;}
+         .one { display:none;}
+         .two { display:none;}
+         .three { display:none;}
+         .four { display:none;}
+         .tog2 { display:none;}
+         .five { display:none;}
+         .G1 { display:none;font-size:30px}
+         .G2 { display:none;font-size:30px}
+         .G3 { display:none;font-size:30px}
+         .six { display:none;}
+         .sev { display:none;}
+         .F11 { display:none;}
+         .F12 { display:none;}
+         .F13 { display:none;}
+      </style>
+      <script type='text/javascript' src='https://code.jquery.com/jquery-1.9.1.min.js'></script>
+      <script type='text/javascript'>
+         $(function(){
+         	var w = $("#mwt_slider_content").width();
+         	$('#mwt_slider_content').css('height', ($(window).height() - 20) + 'px' ); //將區塊自動撐滿畫面高度
+         	
+         	$("#mwt_tab").mouseover(function(){ //滑鼠滑入時
+         		if ($("#mwt_mwt_slider_scroll").css('left') == '-'+w+'px')
+         		{
+         			$("#mwt_mwt_slider_scroll").animate({ left:'0px' }, 600 ,'swing');
+         		}
+         	});
+         	
+         	
+         });
+         
+         $(document).ready(function(){
+           $(".cha").mouseenter(function(){
+             $(this).css({"font-size": "20px","color": "000"});
+           });
+           $(".cha").mouseleave(function(){
+             $(this).css({"font-size": "16px","color": "#000"});
+           });
+         });
+         
+         	 $(document).ready(function(){
+                     $("#A").click(function () {
+                         $("#A1").slideToggle("slow");
+                     });
+                 });
+         		 $(document).ready(function(){
+                     $("#H").click(function () {
+                         $("#I").slideToggle("slow");
+         
+                     });
+                 });
+         			
+         //萬事通ㄉ介紹		
+         	$(document).ready(function(){
+           $(".btn1").click(function(){
+           $(".one").fadeToggle();
+           });
+           $("#B").click(function(){
+           $(".one").show();
+           $(".two").hide();
+           $(".four").hide();
+           $(".five").hide();
+           $(".three").hide();
+           $(".G1").hide();
+           $(".G2").hide();
+           $(".G3").hide();
+           $(".sev").hide();
+           });
+         });
+         
+         	$(document).ready(function(){
+           $(".btn2").click(function(){
+           $(".two").fadeToggle();
+           });
+           $("#C").click(function(){
+            $(".one").hide();
+            $(".three").hide();
+            $(".four").hide();
+            $(".five").hide();
+            $(".two").show();
+              $(".G1").hide();
+           $(".G2").hide();
+           $(".G3").hide();
+           $(".sev").hide();
+           });
+         });
+         
+         $(document).ready(function(){
+           $(".btn3").click(function(){
+           $(".three").fadeToggle();
+           });
+           $("#D").click(function(){
+            $(".one").hide();
+             $(".two").hide();
+         	$(".four").hide();
+         	$(".five").hide();
+           $(".three").show();
+             $(".G1").hide();
+           $(".G2").hide();
+           $(".G3").hide();
+           $(".sev").hide();
+           });
+         });		
+         
+         $(document).ready(function(){
+           $(".btn4").click(function(){
+           $(".four").fadeToggle();
+           });
+           $("#E").click(function(){
+            $(".one").hide();
+             $(".two").hide();
+            $(".three").hide();
+            $(".five").hide();
+             $(".four").show();
+         	$(".G1").hide();
+           $(".G2").hide();
+           $(".G3").hide();
+           $(".sev").hide();
+           });
+         });		
+         
+         //toggle
+         $(document).ready(function(){
+           $(".tog").click(function(){
+           $(".tog2").toggle();
+           });
+         });
+         
+         //slide
+         $(document).ready(function(){
+             $("#F").click(function(){
+                 $(".five").slideDown("fast");
+         		$(".sev").slideUp("fast");
+         		  $(".one").hide();
+         		  $(".two").hide();
+         		  $(".three").hide();
+         		  $(".four").hide();
+         
+             });
+         });
+         
+         $(document).ready(function(){
+             $("#Z").click(function(){
+                 $(".five").slideUp("fast");
+         		$(".sev").slideDown("fast");
+         		$(".G1").slideUp("fast");
+         		$(".G2").slideUp("fast");
+         		$(".G3").slideUp("fast");
+         		 $(".one").hide();
+         		 $(".two").hide();
+         		 $(".three").hide();
+         		 $(".four").hide();
+         
+             });
+         });
+         
+         //fade
+         
+         $(document).ready(function(){
+           $("#G1").click(function(){
+           $(".G1").fadeIn("fast");
+             $(".G2").fadeOut("fast");
+         	  $(".G3").fadeOut("fast");
+           });
+             $("#G2").click(function(){
+           $(".G2").fadeIn("fast");
+               $(".G1").fadeOut("fast");
+         	  $(".G3").fadeOut("fast");
+           });
+             $("#G3").click(function(){
+           $(".G3").fadeIn("fast");
+               $(".G2").fadeOut("fast");
+         	  $(".G1").fadeOut("fast");
+           });
+         });
+         
+         
+         //fadeto
+         $(document).ready(function(){
+           $("#G").click(function(){
+           $(".six").show();
+           $(".one").hide();
+           $(".two").hide();
+           $(".four").hide();
+           $(".five").hide();
+           $(".three").hide();
+           $(".G1").hide();
+           $(".G2").hide();
+           $(".G3").hide();
+           $(".sev").hide();
+         
+           });
+         });
+         $(document).ready(function(){
+             $("#F1").click(function(){
+                 $("#F1").fadeTo(500, 0.7);
+         		 $(".F11").show();
+             });
+         	    $("#F2").click(function(){
+                 $("#F2").fadeTo(500, 0.7);
+         		 $(".F12").show();
+             });
+         	    $("#F3").click(function(){
+         		 $("#F3").fadeTo(500, 0.7);
+         		 $(".F13").show();
+             });
+         });
+         
+      </script>
+   </head>
+   <body>
+      <div id="mwt_mwt_slider_scroll">
+         <div id="mwt_tab">
+            <span>M</span>
+            <span>E</span>
+            <span>N</span>
+            <span>U</span>
+         </div>
+         <div id="mwt_slider_content">
+            <span style="font-weight:bold; font-size:20px">About</span>
+            <br>
+            <span class="tog">銀魂&nbsp;Gintama</span><br>
+            <span class="tog2">我真的很宅ㄏㄏ</span>
+            <br><br>
+            <div id="A">
+               <span class="aa">人物</span>
+            </div>
+            <div id="A1">
+               <span class="cha" id="B">坂田銀時</span><br>
+               <span class="cha" id="C">志村新八</span><br>
+               <span class="cha" id="D">神樂</span><br>
+               <span class="cha" id="E">定春</span>
+            </div>
+            <br>
+            <div id="G">
+               <span class="aa">人物名言</span><br><br>
+            </div>
+            <div>
+               <span class="aa" id="H">真人版演員</span><br>
+            </div>
+            <div id="I">
+               <span class="cha" id="F">萬事屋</span><br>
+               <span class="cha" id="Z">真選組</span>
+            </div>
+         </div>
+      </div>
+      <div class="div1" style="width:50%; text-align: center; padding:50px 0 0 0;">
+         <div>
+            <div class="one">
+               <img src="1.png" width="180px;"><br>
+               <p>
+                  銀魂的第一男主角。身高177公分。經營「萬事屋阿銀」的武士。<br>是個擁有天然捲銀髮和死魚般的眼睛、上進心為零的人。<br>過去活躍於後期攘夷活動，以「白夜叉」之名威震敵我，可謂傳說中的人物。<br>說話的口癖是「你這傢伙是○○嗎」。有一流劍術，一把從電視購物買來的<br>堅硬木刀「洞爺湖」可以粉碎大砲等硬物。<br>被高杉指出與攘夷時代相較，身手似乎變得遲鈍，但實力依舊堅強。
+               </p>
+               <button class="btn1" id="btn">隱藏介紹</button><br>
+            </div>
+         </div>
+         <div class="two">
+            <img src="2.png" width="180px;"><br>
+            <p>
+            <p>
+               銀魂的第二男主角。劍道道場「恆道館」的少年館長，以劍術為志向，<br>為復興道場兼學習武士道，因受到銀時幫忙而成為萬事屋成員。<br>個性相當溫柔，是個有禮貌的少年；但在追星時會變成一個熱血男子漢。瘋狂的迷戀歌手寺門通，為寺門通親衛隊隊長。<br>房間貼滿了寺門通的海報、唱卡拉OK時只唱寺門通的歌曲。<br>平時存在感為零，不過在平時都會扮演吐槽角色，曾被取笑是本體為只會吐槽的眼鏡。
+            </p>
+            <button class="btn2" id="btn">隱藏介紹</button><br>
+         </div>
+         <div class="three">
+            <img src="3.png" width="180px;"><br>
+            <p>
+            <p>
+               銀魂女主角。神樂為天人，出身自宇宙最強戰鬥種族「夜兔」。<br>外貌為橘紅髮，藍眼，頭髮兩端綁著球狀髮髻。身高155公分。<br>星海坊主的長女，春雨第七師團團長神威的妹妹，但因兩人想法不同而感情不佳。<br>由於血統關係，食慾異常旺盛，且重視量多於質，對米飯十分執著，認為沒有吃到米飯就不像吃過一餐，尤愛生蛋拌飯。<br>平時零食則喜愛吃醋昆布。平時在對話中的角色屬性為毒舌，和真選組的沖田總悟相見就會鬥嘴，互相大打出手。
+            </p>
+            <button class="btn3" id="btn">隱藏介紹</button><br>
+         </div>
+         <div class="four">
+            <img src="4.png" width="180px;"><br>
+            <p>
+            <p>
+               宇宙生物「狛神」，體型卻比一般狛神還要巨大，犬類生物，雄性，<br>上代狛神的兒子，司掌「攻」，擁有強大的破壞力。<br>是萬事屋的吉祥物角色，喜歡咬人的頭（尤其是銀時），食量極大，每天要消耗狗食9袋，<br>平時大多數時間在睡覺。被經濟困難的巫女百音和阿音遺棄在萬事屋門前，後被神樂收養，定春的名字亦是神樂所命名。經常作為神樂的坐騎。
+            </P>
+            <button class="btn4" id="btn">隱藏介紹</button><br>
+         </div>
+         <div class="five">
+            <img id="G1" src="4.jpg" width="200px">
+            <img id="G2" src="5.jpg" width="200px">
+            <img id="G3" src="6.jpg" width="200px">
+         </div>
+         <span class="G1">小栗旬飾演坂田銀時</span>
+         <span class="G2">菅田將暉飾演志村新八</span>
+         <span class="G3">橋本環奈飾演神樂</span>
+         <div class="sev">
+            <img id="G5" src="1.jpg" width="200px">
+            <img id="G6" src="2.jpg" width="200px">
+            <img id="G7" src="3.jpg" width="200px">
+         </div>
+         <div class="six">
+            <hr>
+            <h2>"我們是萬事屋!"</h2><br>
+            <img id="F1" src="7.png" width="200px">
+            <img id="F2" src="9.png" width="200px">
+            <img id="F3" src="8.png" width="200px">
+         </div>
+         <span class="F11">
+            <p><b>阿銀</b>:＂有個器官比我的心臟還重要。雖然看不見它，但是它確實存在我的體內。<br>因為有它，我才站的直，就算步履蹣跚也能筆直往前走。<br>如果我不去的話，它可是說攔腰折斷的。我的靈魂...它會攔腰折斷的！＂</p>
+         </span>
+         <span class="F12">
+            <p><b>新八</b>:＂青春就像是蓋在海灘上的城堡，一點些微的小事，就會讓它整個垮掉。＂</p>
+         </span>
+         <span class="F13">
+            <p><b>神樂</b>:＂飆車族算什麼！我可是早已習慣在人生這條路上狂飆了呢！＂</p>
+         </span>
+      </div>
+   </body>
+</html>
